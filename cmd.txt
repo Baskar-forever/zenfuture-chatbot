@@ -1,0 +1,1 @@
+docker exec -it zenfuture_postgres psql -U zenfuture -d zenfuture_chatbot
