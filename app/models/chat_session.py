@@ -8,6 +8,7 @@ from sqlalchemy import JSON
 from sqlalchemy.sql import func
 
 from app.db.database import Base
+from sqlalchemy.ext.mutable import MutableDict
 
 
 class ChatSession(Base):
@@ -28,8 +29,8 @@ class ChatSession(Base):
     )
 
     pending_data = Column(
-        JSON,
-        nullable=True,
+        MutableDict.as_mutable(JSON),
+        nullable=False,
         default=dict
     )
 

@@ -40,11 +40,13 @@ class SessionRepository:
     def update_pending_data(
         self,
         db,
-        session: ChatSession,
-        pending_data: dict
+        session,
+        pending_data
     ):
 
-        session.pending_data = pending_data
+        session.pending_data = dict(
+            pending_data
+        )
 
         db.commit()
         db.refresh(session)
