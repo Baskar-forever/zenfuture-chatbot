@@ -8,8 +8,8 @@ class Chunker:
 
     def __init__(
         self,
-        chunk_size: int = 800,
-        chunk_overlap: int = 150
+        chunk_size: int = 400,
+        chunk_overlap: int = 75
     ):
 
         self.text_splitter = (
